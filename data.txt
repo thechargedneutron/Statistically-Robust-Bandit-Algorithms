@@ -1,0 +1,2 @@
+gaussian 1 1
+gaussian 2 3

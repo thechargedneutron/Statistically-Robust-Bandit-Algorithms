@@ -16,7 +16,7 @@ reward_chart = []
 num_seeds = 20
 
 #Instance
-bandit_instances = interpret_bandit_instances("data2.txt")
+bandit_instances = interpret_bandit_instances("data.txt")
 
 for setting in range(num_settings):
     if algorithm == "fixed-horizon":
