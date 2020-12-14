@@ -5,6 +5,9 @@ from distributions import *
 from estimators import *
 
 def regret(algo_type="R-UCB", estimator_type="average", bandit_instances=None, horizon=10e3, f="constant", g=None, round_robin_thresh=None, block_size=None, heavy_tail_params=None):
+    if algo_type not in ["R-UCB", "R-UCB-G", "R-UCB-G-MOM"]:
+        print("Invalid algorithm")
+        raise ValueError
     total_regret = 0.0
     for i in range(bandit_instances["num_arms"]):
         bandit_instances[i]["samples"] = [] #Clear sample list everytime
