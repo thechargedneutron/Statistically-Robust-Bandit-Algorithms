@@ -1,4 +1,4 @@
-# Statistically-Robust-Bandit-Algorithms
+# Statistically Robust Bandit Algorithms
 
 This code contains the implementation of the paper "[Bandit algorithms: Letting go of logarithmic regret
 for statistical robustness](https://arxiv.org/abs/2006.12038)". The paper is currently under review at AISTATS 2021.
