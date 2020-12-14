@@ -1,13 +1,13 @@
 # Statistically-Robust-Bandit-Algorithms
 
-The code for the paper will be up once it is accepted to AISTATS 2021.
-
+This code contains the implementation of the paper "Bandit algorithms: Letting go of logarithmic regret
+for statistical robustness". The paper is currently under review at AISTATS 2021.
 Paper : https://arxiv.org/abs/2006.12038
 
-Cite as 
+Cite as
 ```
 @misc{ashutosh2020bandit,
-      title={Bandit algorithms: Letting go of logarithmic regret for statistical robustness}, 
+      title={Bandit algorithms: Letting go of logarithmic regret for statistical robustness},
       author={Kumar Ashutosh and Jayakrishnan Nair and Anmol Kagrecha and Krishna Jagannathan},
       year={2020},
       eprint={2006.12038},
@@ -15,3 +15,15 @@ Cite as
       primaryClass={cs.LG}
 }
 ```
+
+## Requirements
+* numpy
+* matplotlib
+
+## Usage
+
+Run `python runner.py`
+
+## Parameters and Instructions
+
+TODO

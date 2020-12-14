@@ -62,14 +62,14 @@ def plot_with_bars(cumulative_regrets, labels_list=None, save=False, savepath=No
             line, = ax.plot(rn, avg, label="{}".format(i), color=colors[i%len(colors)])
         else:
             line, = ax.plot(rn, avg, label=labels_list[i], color=colors[i%len(colors)])
-        bar_interval = int(len(cumulative_regret)/10) #To ensure 10 bars
-        offset = int(len(cumulative_regret)/30) #Shift bars to avoid obverlap
+        bar_interval = int(cumulative_regret.shape[1]/10) #To ensure 10 bars
+        offset = int(cumulative_regret.shape[1]/30) #Shift bars to avoid obverlap
         if showbar:
             ax.errorbar(rn[offset*i::bar_interval], avg[offset*i::bar_interval], std[offset*i::bar_interval]/2, color=line.get_color(), solid_capstyle='projecting', capsize=5, linestyle='None')
     ax.set_xlabel('Number of rounds (t)', fontsize=font_size)
     ax.set_ylabel('Cumulative regret', fontsize=font_size)
-    ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda x, pos: '{}'.format(int(x/1000)) + 'K'))
-    ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, pos: '{}'.format(int(x/1000)) + 'K'))
+    #ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda x, pos: '{}'.format(int(x/1000)) + 'K'))
+    #ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, pos: '{}'.format(int(x/1000)) + 'K'))
     ax.legend(loc="upper left", prop={"size":0.8*font_size}, frameon=False)
     ax.figure
     plt.tick_params(labelsize=font_size)
