@@ -22,7 +22,3 @@ Cite as
 ## Usage
 
 Run `python runner.py`
-
-## Parameters and Instructions
-
-TODO
